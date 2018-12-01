@@ -5,6 +5,7 @@ Quick start Wordpress environment with Docker
 Docker and Docker-Compose should be installed
 * [Docker ](https://docs.docker.com/install/) version 12 and above
 * [Docker compose](https://docs.docker.com/compose/install/) version 1.10.0 and above
+
 [Automatic installation Docker and Docker-Compose with Ansible ](https://github.com/oleh-v/Ansible-Docker-Install)
 
 ## Usage
