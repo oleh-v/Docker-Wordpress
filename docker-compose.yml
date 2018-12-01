@@ -1,0 +1,31 @@
+version: "3.1"
+
+services:
+
+  wp:
+    image: wordpress
+    container_name: wp
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./www:/var/www/html
+    working_dir: /var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: db_user
+      WORDPRESS_DB_PASSWORD: my_password_123
+      WORDPRESS_DB_NAME: cool_base
+
+  db:
+    image: mysql:5.7.12
+    container_name: db
+    restart: always
+    volumes:
+     - ./db:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=cool_base
+      - MYSQL_ROOT_PASSWORD=ROOT_PASSWORD
+      - MYSQL_USER=db_user
+      - MYSQL_PASSWORD=my_password_123
+
