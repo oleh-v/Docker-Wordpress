@@ -31,3 +31,7 @@ docker stack deploy -c stack.yml stack_name
 
 * ./db directory will contains database after creating
 * ./www directory will contains wordpress site after creating
+
+## [Portainer](https://www.portainer.io/)
+* [Portainer](https://www.portainer.io/) is a lightweight management UI which allows you to easily manage your different Docker environments (Docker hosts or Swarm clusters).
+* Portainer will be available by accessing the port `9000` 

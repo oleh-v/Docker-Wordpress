@@ -38,3 +38,18 @@ services:
       - MYSQL_ROOT_PASSWORD=ROOT_PASSWORD
       - MYSQL_USER=db_user
       - MYSQL_PASSWORD=my_password_123
+
+  portainer:
+    image: portainer/portainer
+    deploy:
+      replicas: 1
+      update_config:
+        parallelism: 1
+        delay: 5s
+      restart_policy:
+        condition: on-failure
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer:/data
